@@ -1,0 +1,17 @@
+.header{
+    position: relative;
+    color:rebeccapurple;
+    
+}
+.heading-text{
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    font-size: 60px;
+    font-style: italic;
+    font-weight: 600;
+}
+span{
+    color:yellow;
+    
+}
