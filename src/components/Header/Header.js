@@ -5,9 +5,9 @@ const Header = () => {
 
     return (
         <div>
-            <div class='header'>
+            <div className='header'>
             <img className='w-100' src={image}alt=""/>
-            <p class='heading-text'>English Premier <span>Leage</span> </p>
+            <p className='heading-text'>English Premier <span>Leage</span> </p>
             </div>
             
         </div>
