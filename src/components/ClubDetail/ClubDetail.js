@@ -4,7 +4,7 @@ import './ClubDetail.css';
 import Male from "../../image/male.png";
 import FeMale from "../../image/female.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faFlag, faMapMarkerAlt,faFutbol,faVenusMars } from '@fortawesome/free-solid-svg-icons'
+import {faFlag, faMapMarkerAlt,faFutbol,faVenusMars, } from '@fortawesome/free-solid-svg-icons'
 
 const ClubDetail = () => {
      const {teamId} = useParams();
@@ -16,7 +16,7 @@ const ClubDetail = () => {
          .then(data =>setTeam(data.teams[0]))
      },[teamId]);
     console.log(team)
-     const {strStadiumThumb, strTeamBadge, strSport, strTeam, strGender, intFormedYear, strCountry, strDescriptionDE, strDescriptionEN, strFacebook, strInstagram, strYoutube} = team;
+     const {strStadiumThumb, strTeamBadge, strSport, strTeam, strGender, intFormedYear, strCountry, strDescriptionDE, strDescriptionEN, } = team;
     return (
         <div className='bg-light'>
            

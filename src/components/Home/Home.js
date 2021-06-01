@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Club from '../Club/Club';
-import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCopyright } from '@fortawesome/free-solid-svg-icons';
