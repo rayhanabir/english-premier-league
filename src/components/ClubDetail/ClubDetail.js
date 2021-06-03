@@ -4,7 +4,8 @@ import './ClubDetail.css';
 import Male from "../../image/male.png";
 import FeMale from "../../image/female.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faFlag, faMapMarkerAlt,faFutbol,faVenusMars, } from '@fortawesome/free-solid-svg-icons'
+import {faFlag, faMapMarkerAlt,faFutbol,faVenusMars,} from '@fortawesome/free-solid-svg-icons';
+import { faFacebookF, faInstagram, faTwitter} from '@fortawesome/free-brands-svg-icons';
 
 const ClubDetail = () => {
      const {teamId} = useParams();
@@ -16,8 +17,9 @@ const ClubDetail = () => {
          .then(data =>setTeam(data.teams[0]))
      },[teamId]);
     console.log(team)
-     const {strStadiumThumb, strTeamBadge, strSport, strTeam, strGender, intFormedYear, strCountry, strDescriptionDE, strDescriptionEN, } = team;
+     const {strStadiumThumb,strFacebook, strInstagram, strTwitter,  strTeamBadge, strSport, strTeam, strGender, intFormedYear, strCountry, strStadiumDescription,  strDescriptionEN, } = team;
     return (
+        <div>
         <div className='bg-light'>
            
             <div className='club-stadium'>
@@ -45,10 +47,19 @@ const ClubDetail = () => {
                 </div>
             </div>
            
-                <p className='mt-4 container'>{strDescriptionDE}</p> 
+                <p className='mt-4 container'>{strStadiumDescription}</p> 
                 <br/>
-                <p className='container'>{strDescriptionEN}</p>
-               
+                <p className='container mt-4'>{strDescriptionEN}</p>
+                
+ 
+        </div>
+                <div className='icon'>
+                  
+                   <a className='icon-item' href={`https://${strFacebook}`} target='_blank' rel="noreferrer"><FontAwesomeIcon size='2x' icon={faFacebookF} /></a>
+                   <a className='icon-item' href={`https://${strInstagram}`} target='_blank' rel="noreferrer"><FontAwesomeIcon size='2x' icon={faInstagram} /></a>
+                   <a className='icon-item' href={`https://${strTwitter}`} target="_blank" rel="noreferrer"><FontAwesomeIcon size='2x' icon={faTwitter} /></a>
+                   
+                </div>
         </div>
     );
 };
